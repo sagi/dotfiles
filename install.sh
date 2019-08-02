@@ -18,3 +18,11 @@ echo "# Installing I3"
 mkdir -p ~/.i3 
 mv -v ~/.i3/config~/.i3/config.old 2> /dev/null
 ln -sf $BASE/i3config ~/.i3/config
+
+
+OS_RELEASE=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
+
+if [[ $OS_RELEASE = '"Ubuntu"' ]]; then
+  echo "# Installing Ubuntu apps"
+  ./ubuntu.sh
+fi

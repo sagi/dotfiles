@@ -1,5 +1,11 @@
 #!/bin/bash
 
+get_latest_release() {
+  curl --silent "https://api.github.com/repos/$1/releases/latest" | # Get latest release from GitHub api
+    grep '"tag_name":' |                                            # Get tag line
+    sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
+}
+
 echo "# Installing VIM"
 
 cd $(dirname $BASH_SOURCE)
@@ -24,5 +30,17 @@ OS_RELEASE=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
 
 if [[ $OS_RELEASE = '"Ubuntu"' ]]; then
   echo "# Installing Ubuntu apps"
-  ./ubuntu.sh
+  ./ubuntu-install.sh
 fi
+
+echo "# Installing FZF"
+
+git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
+~/.fzf/install --all
+
+
+echo "# Installing NVM"
+
+LATEST_NVM_RELEASE=$(get_latest_release nvm-sh/nvm)
+NVM_INSTALL_URL="https://raw.githubusercontent.com/nvm-sh/nvm/$LATEST_NVM_RELEASE/install.sh "
+curl -o- $NVM_INSTALL_URL | bash

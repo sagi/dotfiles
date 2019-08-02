@@ -6,18 +6,12 @@ get_latest_release() {
     sed -E 's/.*"([^"]+)".*/\1/'                                    # Pluck JSON value
 }
 
-echo "# Installing VIM"
-
 cd $(dirname $BASH_SOURCE)
 BASE=$(pwd)
 
-mkdir -p ~/.vim/autoload
-curl --insecure -fLo ~/.vim/autoload/plug.vim https://raw.github.com/junegunn/vim-plug/master/plug.vim
+echo "# Installing VIM"
 
-mv -v ~/.vimrc ~/.vimrc.old 2> /dev/null
-ln -sf $BASE/vimrc ~/.vimrc
-
-vim +PlugInstall +qall
+./install-vim.sh
 
 echo "# Installing I3"
 
@@ -30,7 +24,7 @@ OS_RELEASE=$(awk -F= '/^NAME/{print $2}' /etc/os-release)
 
 if [[ $OS_RELEASE = '"Ubuntu"' ]]; then
   echo "# Installing Ubuntu apps"
-  ./ubuntu-install.sh
+  ./install-ubuntu.sh
 fi
 
 echo "# Installing FZF"

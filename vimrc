@@ -162,6 +162,14 @@ noremap <Leader>s :update<CR>
 imap <f2> <c-o>:call ToggleHebrew()<cr>
 map <f2> :call ToggleHebrew()<cr>
 
+" COC.vim
+" https://github.com/neoclide/coc.nvim/wiki/Completion-with-sources
+" use <c-space>for trigger completion
+inoremap <silent><expr> <c-space> coc#refresh()
+inoremap <expr> <Tab> pumvisible() ? "\<C-n>" : "\<Tab>"
+inoremap <expr> <S-Tab> pumvisible() ? "\<C-p>" : "\<S-Tab>"
+
+
 " Nerdtree
 nmap <C-n> :NERDTreeToggle<CR>
 noremap <Leader>n :NERDTreeToggle<cr>

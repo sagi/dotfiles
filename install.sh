@@ -44,3 +44,9 @@ echo "# Installing NVM"
 LATEST_NVM_RELEASE=$(get_latest_release nvm-sh/nvm)
 NVM_INSTALL_URL="https://raw.githubusercontent.com/nvm-sh/nvm/$LATEST_NVM_RELEASE/install.sh "
 curl -o- $NVM_INSTALL_URL | bash
+
+echo "# Installing oh-my-zsh"
+
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+mv -v ~/.zshrc ~/.zshrc.old 2> /dev/null
+ln -sf $BASE/zshrc ~/.zshrc

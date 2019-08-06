@@ -26,3 +26,7 @@ export NVM_DIR="$HOME/.nvm"
 export PATH="/home/sagi/.cargo/bin:$PATH"
 
 alias center="XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
+
+# Disable the terminal being stuck by Ctrl-S or ctrl-Q
+
+stty -ixon

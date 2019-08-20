@@ -2,6 +2,7 @@ call plug#begin()
 
 Plug 'w0rp/ale'
 Plug 'pangloss/vim-javascript'
+Plug 'mxw/vim-jsx'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'mileszs/ack.vim'

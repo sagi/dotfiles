@@ -15,8 +15,8 @@ setxkbmap us,il -option grp:alt_shift_toggle
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
-export FZF_DEFAULT_COMMAND="rg --files --no-ignore-vcs --glob '!*/{.git,node_modules}/**'"
-export FZF_CTRL_T_COMMAND="rg --files --no-ignore-vcs --glob '!*{.git,node_modules}/**'"
+export FZF_DEFAULT_COMMAND="rg --files --hidden --glob '!*/{.git,node_modules}/**'"
+export FZF_CTRL_T_COMMAND="rg --files --hidden --no-ignore-vcs --glob '!*{.git,node_modules}/**'"
 export FZF_ALT_C_COMMAND="fd --type d --no-ignore-vcs --exclude node_modules --exclude .git"
 
 export NVM_DIR="$HOME/.nvm"
@@ -28,5 +28,4 @@ export PATH="/home/sagi/.cargo/bin:$PATH"
 alias center="XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
 # Disable the terminal being stuck by Ctrl-S or ctrl-Q
-
 stty -ixon

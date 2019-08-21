@@ -1,8 +1,6 @@
 call plug#begin()
 
 Plug 'w0rp/ale'
-Plug 'pangloss/vim-javascript'
-Plug 'mxw/vim-jsx'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'mileszs/ack.vim'
@@ -14,8 +12,9 @@ Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
-Plug 'elzr/vim-json'
-Plug 'ctrlpvim/ctrlp.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
+Plug 'junegunn/fzf.vim'
 
 call plug#end()
 
@@ -122,6 +121,15 @@ endif
 
 " ack.vim
 let g:ackprg = 'rg --vimgrep --no-heading'
+
+" FZF.vim
+nnoremap <C-p> :Files<CR>
+nmap <Leader>b :Buffers<CR>
+nmap <Leader>h :History<CR>
+nmap <Leader>t :BTags<CR>
+nmap <Leader>T :Tags<CR>
+nmap <Leader>/ :Rg<Space>
+
 
 " CtrlP
 set runtimepath^=~/.vim/bundle/ctrlp.vim

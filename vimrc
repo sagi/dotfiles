@@ -13,6 +13,7 @@ Plug 'mbbill/undotree'
 Plug 'luochen1990/rainbow'
 Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-unimpaired'
 Plug 'elzr/vim-json'
 Plug 'ctrlpvim/ctrlp.vim'
 
@@ -181,6 +182,12 @@ noremap <Leader>n :NERDTreeToggle<cr>
 noremap <Leader>f :NERDTreeFind<cr>
 " close nerdtree and vim on close file
 autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") && b:NERDTreeType == "primary") | q | endif
+
+" Fugitive
+noremap <Leader>gst :Gstatus<cr>
+noremap <Leader>gd :Gdiff<cr>
+noremap <Leader>ga :Gwrite<cr>
+noremap <Leader>ga :Gwrite<cr>
 
 " yarn build
 noremap <Leader>b :!yarn build<CR>

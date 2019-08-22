@@ -162,7 +162,8 @@ bar {
 bindsym $mod+x move workspace to output right
 
 # Tap on Click for Laptops: https://gist.github.com/sagi/f417fa0db992982d7fa88b83a4a98019
-exec xinput set-prop 14 279 1 # Asus Zenbook
+#exec xinput set-prop 14 279 1 # Asus Zenbook
+exec xinput set-prop 11 289 1 # X1C7
 #exec xinput set-prop 12 277 1 # X1 Carbon 6th & comment out blacklist i2c_i801 in blacklist.conf
 
 exec redshift

@@ -122,19 +122,13 @@ endif
 " ack.vim
 let g:ackprg = 'rg --vimgrep --no-heading'
 
+
 " FZF.vim
 
 function! s:find_git_root()
   return system('git rev-parse --show-toplevel 2> /dev/null')[:-2]
 endfunction
 command! ProjectFiles execute 'Files' s:find_git_root()
-
-nnoremap <C-p> :ProjectFiles<CR>
-nmap <Leader>b :Buffers<CR>
-nmap <Leader>h :History<CR>
-nmap <Leader>t :BTags<CR>
-nmap <Leader>T :Tags<CR>
-nmap <Leader>rg :Rg<Space>
 
 
 " CtrlP
@@ -148,6 +142,16 @@ let g:ctrlp_show_hidden = 1
 " ### MAPS ###
 
 let mapleader = ","
+
+" FZF.vim
+"
+nnoremap <C-p> :ProjectFiles<CR>
+nnoremap <Leader>b :Buffers<CR>
+nnoremap <Leader>h :History<CR>
+nnoremap <Leader>t :BTags<CR>
+nnoremap <Leader>T :Tags<CR>
+nnoremap <Leader>rg :Rg<CR>
+
 
 " Ack
 cnoreabbrev Ack Ack!

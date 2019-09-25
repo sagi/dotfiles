@@ -134,7 +134,7 @@ nmap <Leader>b :Buffers<CR>
 nmap <Leader>h :History<CR>
 nmap <Leader>t :BTags<CR>
 nmap <Leader>T :Tags<CR>
-nmap <Leader>/ :Rg<Space>
+nmap <Leader>rg :Rg<Space>
 
 
 " CtrlP

@@ -151,6 +151,8 @@ nnoremap <Leader>h :History<CR>
 nnoremap <Leader>t :BTags<CR>
 nnoremap <Leader>T :Tags<CR>
 nnoremap <Leader>rg :Rg<CR>
+nnoremap <Leader>c :Commits<CR>
+nnoremap <Leader>bc :BCommits<CR>
 
 
 " Ack

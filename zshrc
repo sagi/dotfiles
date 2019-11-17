@@ -20,7 +20,7 @@ alias fd=fdfind
 #export FZF_DEFAULT_COMMAND="rg -i --files --hidden --glob '!*/{.git,node_modules}/**'"
 export FZF_DEFAULT_COMMAND="fdfind --type f --hidden --follow --exclude .git --exclude node_modules"
 export FZF_CTRL_T_COMMAND="rg -i --files --hidden --no-ignore-vcs --glob '!*{.git,node_modules}/**'"
-export FZF_ALT_C_COMMAND="fd -i --type d --no-ignore-vcs --exclude node_modules --exclude .git"
+export FZF_ALT_C_COMMAND="fdfind -i --type d --no-ignore-vcs --exclude node_modules --exclude .git"
 
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm

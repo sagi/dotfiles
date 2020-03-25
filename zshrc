@@ -32,3 +32,16 @@ alias center="XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 
 # Disable the terminal being stuck by Ctrl-S or ctrl-Q
 stty -ixon
+
+export GOPATH=$HOME/go
+export PATH="/usr/lib/go-1.13/bin/:$PATH"
+export PATH="/home/sagi/anaconda3/bin:$PATH"
+export PATH="/home/sagi/gits/btcd:$PATH"
+export PATH="/home/sagi/gits/lnd:$PATH"
+
+export ANDROID_HOME=$HOME/Android/Sdk
+export ANDROID_SDK_ROOT=$ANDROID_HOME
+export PATH=$PATH:$ANDROID_HOME/emulator
+export PATH=$PATH:$ANDROID_HOME/tools
+export PATH=$PATH:$ANDROID_HOME/tools/bin
+export PATH=$PATH:$ANDROID_HOME/platform-tools

@@ -163,6 +163,7 @@ bindsym $mod+x move workspace to output right
 
 # Tap on Click for Laptops: https://gist.github.com/sagi/f417fa0db992982d7fa88b83a4a98019
 #exec xinput set-prop 14 279 1 # Asus Zenbookxinput set-prop 17 306 1
+#exec xinput set-prop 17 320 1 # X1C7
 exec xinput set-prop 11 302 1 # X1C7
 #exec xinput set-prop 12 277 1 # X1 Carbon 6th & comment out blacklist i2c_i801 in blacklist.conf
 
@@ -170,12 +171,12 @@ exec redshift
 
 
 # Pulse Audio controls
-bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 14 +5% #increase sound volume
-bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 14 -5% #decrease sound volume
-bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 14 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 5 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 5 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 5 toggle # mute sound
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 10 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightness
 #bindsym XF86MonBrightnessUp exec light -A 20 # increase screen brightness
 #bindsym XF86MonBrightnessDown exec light -U 20 # decrease screen brightness

@@ -16,6 +16,8 @@ Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'HerringtonDarkholme/yats.vim'
+Plug 'dracula/vim', { 'as': 'dracula' }
+
 
 call plug#end()
 
@@ -358,3 +360,5 @@ if !exists(":DiffOrig")
 	command DiffOrig vert new | set bt=nofile | r # | 0d_ | diffthis
 				\ | wincmd p | diffthis
 endif
+
+colorscheme dracula

@@ -162,11 +162,9 @@ bar {
 bindsym $mod+x move workspace to output right
 
 # Tap on Click for Laptops: https://gist.github.com/sagi/f417fa0db992982d7fa88b83a4a98019
-#exec xinput set-prop 14 279 1 # Asus Zenbookxinput set-prop 17 306 1
-#exec xinput set-prop 17 320 1 # X1C7
-#exec xinput set-prop 11 302 1 # X1C7
-#exec xinput set-prop 12 277 1 # X1 Carbon 6th & comment out blacklist i2c_i801 in blacklist.conf
+# xinput list; xinput list-props <id>; xinput set-prop <id> <term> <value>
 exec xinput set-prop "SYNA8005:00 06CB:CD8C Touchpad"  "libinput Tapping Enabled" 1
+exec xinput set-prop "SYNA8005:00 06CB:CD8C Touchpad" "libinput Accel Speed" 0.5
 
 exec redshift
 

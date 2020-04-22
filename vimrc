@@ -17,6 +17,7 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'HerringtonDarkholme/yats.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'chrisbra/recover.vim'
 
 
 call plug#end()

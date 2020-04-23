@@ -12,10 +12,8 @@ Plug 'Yggdroot/indentLine'
 Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-unimpaired'
 Plug 'vim-airline/vim-airline'
-Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
-Plug 'HerringtonDarkholme/yats.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'chrisbra/recover.vim'
 

@@ -4,6 +4,7 @@ ZSH_THEME="eastwood"
 
 plugins=(
   git
+  zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -48,3 +49,5 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 # Dracula gnome-terminal dircolors
 eval `dircolors /home/sagi/.dir_colors/dircolors`
+
+alias darkchrome="google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode"

@@ -1,6 +1,6 @@
 call plug#begin()
 
-Plug 'neoclide/coc.nvim', {'tag': '*', 'branch': 'release'}
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'airblade/vim-gitgutter'
 Plug 'w0rp/ale'
 Plug 'mileszs/ack.vim'
@@ -16,6 +16,8 @@ Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
 Plug 'junegunn/fzf.vim'
 Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'chrisbra/recover.vim'
+Plug 'sheerun/vim-polyglot'
+Plug 'junegunn/goyo.vim'
 
 
 call plug#end()

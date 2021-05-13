@@ -190,6 +190,16 @@ noremap <Leader>s :update<CR>
 imap <f2> <c-o>:call ToggleHebrew()<cr>
 map <f2> :call ToggleHebrew()<cr>
 
+func! ToggleHebrew()
+  if &rl
+    set norl
+    set keymap=
+  else
+    set rl
+    set keymap=hebrew
+  end
+endfunc
+
 
 
 
@@ -210,6 +220,7 @@ noremap <Leader>ga :Gwrite<cr>
 noremap <Leader>b :!yarn build<CR>
 noremap <Leader>d :!yarn deploy<CR>
 noremap <Leader>tf :!yarn test %<CR>
+noremap <Leader>tu :!yarn test -u %<CR>
 noremap <Leader>ta :!yarn test<CR>
 
 " Prettier

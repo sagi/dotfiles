@@ -35,10 +35,11 @@ alias center="XDG_CURRENT_DESKTOP=GNOME gnome-control-center"
 stty -ixon
 
 export GOPATH=$HOME/go
-export PATH="/usr/lib/go-1.13/bin/:$PATH"
-export PATH="/home/sagi/anaconda3/bin:$PATH"
-export PATH="/home/sagi/gits/btcd:$PATH"
-export PATH="/home/sagi/gits/lnd:$PATH"
+export PATH=$PATH:$GOPATH/bin
+#export PATH="/usr/lib/go-1.13/bin/:$PATH"
+#export PATH="/home/sagi/anaconda3/bin:$PATH"
+#export PATH="/home/sagi/gits/btcd:$PATH"
+#export PATH="/home/sagi/gits/lnd:$PATH"
 
 export ANDROID_HOME=$HOME/Android/Sdk
 export ANDROID_SDK_ROOT=$ANDROID_HOME
@@ -51,3 +52,8 @@ export PATH=$PATH:$ANDROID_HOME/platform-tools
 eval `dircolors /home/sagi/.dir_colors/dircolors`
 
 alias darkchrome="google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode"
+
+export PATH=$PATH:/usr/local/go/bin
+
+# Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
+export PATH="$PATH:$HOME/.rvm/bin"

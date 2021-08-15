@@ -150,7 +150,7 @@ let mapleader = ","
 " FZF.vim
 "
 nnoremap <C-p> :ProjectFiles<CR>
-nnoremap <Leader>b :Buffers<CR>
+nnoremap <C-b> :Buffers<CR>
 nnoremap <Leader>h :History<CR>
 nnoremap <Leader>t :BTags<CR>
 nnoremap <Leader>T :Tags<CR>

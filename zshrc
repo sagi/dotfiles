@@ -2,10 +2,7 @@ export ZSH="/home/sagi/.oh-my-zsh"
 
 ZSH_THEME="eastwood"
 
-plugins=(
-  git
-  zsh-syntax-highlighting
-)
+plugins=( git)
 
 source $ZSH/oh-my-zsh.sh
 

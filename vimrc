@@ -18,6 +18,9 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 Plug 'chrisbra/recover.vim'
 Plug 'sheerun/vim-polyglot'
 Plug 'junegunn/goyo.vim'
+Plug 'pangloss/vim-javascript'    " JavaScript support
+Plug 'leafgarland/typescript-vim' " TypeScript syntax
+Plug 'maxmellon/vim-jsx-pretty'   " JS and JSX syntax
 
 
 call plug#end()

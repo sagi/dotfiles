@@ -51,6 +51,28 @@ eval `dircolors /home/sagi/.dir_colors/dircolors`
 alias darkchrome="google-chrome-stable --enable-features=WebUIDarkMode --force-dark-mode"
 
 export PATH=$PATH:/usr/local/go/bin
+export PATH=$PATH:/home/sagi/miniconda3/bin
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin"
+
+# >>> conda initialize >>>
+# !! Contents within this block are managed by 'conda init' !!
+__conda_setup="$('/home/sagi/miniconda3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+if [ $? -eq 0 ]; then
+    eval "$__conda_setup"
+else
+    if [ -f "/home/sagi/miniconda3/etc/profile.d/conda.sh" ]; then
+        . "/home/sagi/miniconda3/etc/profile.d/conda.sh"
+    else
+        export PATH="/home/sagi/miniconda3/bin:$PATH"
+    fi
+fi
+unset __conda_setup
+# <<< conda initialize <<<
+
+# The next line updates PATH for the Google Cloud SDK.
+if [ -f '/home/sagi/google-cloud-sdk/path.zsh.inc' ]; then . '/home/sagi/google-cloud-sdk/path.zsh.inc'; fi
+
+# The next line enables shell command completion for gcloud.
+if [ -f '/home/sagi/google-cloud-sdk/completion.zsh.inc' ]; then . '/home/sagi/google-cloud-sdk/completion.zsh.inc'; fi

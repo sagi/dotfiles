@@ -9,6 +9,7 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
+
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -152,8 +153,10 @@ bindsym $mod+x move workspace to output right
 
 # Tap on Click for Laptops: https://gist.github.com/sagi/f417fa0db992982d7fa88b83a4a98019
 # xinput list; xinput list-props <id>; xinput set-prop <id> <term> <value>
-exec xinput set-prop "SYNA8005:00 06CB:CD8C Touchpad"  "libinput Tapping Enabled" 1
-exec xinput set-prop "SYNA8005:00 06CB:CD8C Touchpad" "libinput Accel Speed" 0.5
+#exec xinput set-prop "SYNA8005:00 06CB:CD8C Touchpad"  "libinput Tapping Enabled" 1
+exec xinput set-prop "ELAN0672:00 04F3:3187 Touchpad"  "libinput Tapping Enabled" 1
+#exec xinput set-prop "SYNA8005:00 06CB:CD8C Touchpad" "libinput Accel Speed" 0.5
+exec xinput set-prop "ELAN0672:00 04F3:3187 Touchpad" "libinput Accel Speed" 0.5
 
 exec redshift
 
@@ -202,3 +205,7 @@ bar {
 
 # start dmenu (a program launcher)
 bindsym $mod+d exec "rofi -show run"
+gaps inner 5
+gaps outer 5
+exec --no-startup-id picom -CGb
+exec --no-startup-id feh --bg-scale /home/sagi/Downloads/seafog_1080.jpg
